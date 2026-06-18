@@ -1,7 +1,7 @@
 import type { Metadata } from "next"
+import Image from "next/image"
 import Link from "next/link"
 import { MapPin, Clock, Phone, Camera, Navigation } from "lucide-react"
-import { PageHeader } from "@/components/page-header"
 import { CtaSection } from "@/components/cta-section"
 import { Button } from "@/components/ui/button"
 import { SITE, waLink } from "@/lib/site"
@@ -17,11 +17,28 @@ export default function UbicacionPage() {
 
   return (
     <main>
-      <PageHeader
-        eyebrow="Visitanos"
-        title="Nuestro local en Maschwitz"
-        description="Te esperamos en nuestro local físico. Atención personalizada, productos a la vista y la confianza de comprar en persona."
-      />
+      <section className="relative overflow-hidden border-b border-border bg-card">
+        <Image
+          src="/ubic.png"
+          alt="Local ZoneTech Maschwitz"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover opacity-15"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/30 to-background/80" />
+        <div className="relative mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8 lg:py-20">
+          <p className="mb-2 text-sm font-medium uppercase tracking-wider text-primary">
+            Visitanos
+          </p>
+          <h1 className="font-heading text-3xl font-bold tracking-tight text-balance sm:text-4xl lg:text-5xl">
+            Nuestro local en Maschwitz
+          </h1>
+          <p className="mt-4 max-w-2xl text-muted-foreground text-pretty">
+            Te esperamos en nuestro local físico. Atención personalizada, productos a la vista y la confianza de comprar en persona.
+          </p>
+        </div>
+      </section>
 
       <section className="mx-auto max-w-6xl px-4 pb-16 md:pb-24">
         <div className="grid gap-6 lg:grid-cols-2">

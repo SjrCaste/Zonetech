@@ -43,6 +43,7 @@ export const products: Product[] = [
     price: 1899000,
     stock: 4,
     image: "/products/iphone-17-pro.png",
+    featured: true,
   },
   {
     id: "ip17-256",

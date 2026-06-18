@@ -108,10 +108,10 @@ export default function HomePage() {
                   iPhone 17 Pro Max
                 </span>
                 <span className="rounded-full bg-background/80 px-3 py-1 text-xs font-medium backdrop-blur-md">
-                  16 Pro
+                  iPhone 17 Pro
                 </span>
                 <span className="rounded-full bg-background/80 px-3 py-1 text-xs font-medium backdrop-blur-md">
-                  iPhone 15
+                  16 Pro
                 </span>
               </div>
             </div>
@@ -193,7 +193,7 @@ export default function HomePage() {
             </Button>
           </div>
           <div className="mt-8 grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-4">
-            {featured.map((p) => (
+            {featured.slice(0, 4).map((p) => (
               <ProductCard key={p.id} product={p} />
             ))}
           </div>
